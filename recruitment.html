@@ -19,13 +19,12 @@
       </div>
     </div>
 
-    <div
-      class="fixed top-0 left-0 z-30 flex items-center justify-between w-full px-5 py-3 text-gray-200 bg-[#00000099] menu"
+    <div class="fixed top-[1px] left-0 z-30 flex items-center justify-between w-full px-5 py-3 text-gray-200 menu"
       id="navbar">
       <div class="logo">
         <img src="https://picsum.photos/300/300" alt="" class="w-12 h-12 rounded-md">
       </div>
-      <div class="menu-item">
+      <div class="hidden menu-item sm:block">
         <ul class="flex gap-5 text-lg">
           <li>
             <a href="/" class="hover:text-white">Trang chủ</a>
@@ -41,12 +40,57 @@
           </li>
         </ul>
       </div>
+
+      <div class="block sm:hidden">
+        <div class="p-2.5 hover:bg-[#0000004d] rounded-full cursor-pointer" id="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute top-0 left-0 z-50 hidden w-full h-full modal-wrapper" id="modal-wrapper">
+      <div class="relative w-full h-full">
+        <div class="absolute top-0 left-0 w-full h-full menu-wrapper bg-[#00000080]">
+        </div>
+        <div class="fixed top-0 left-0 w-full h-full max-w-sm bg-[#212121]">
+          <div class="relative w-full h-full">
+
+            <div class="flex items-center justify-center w-10 h-10 m-2 p-1.5 cursor-pointer" id="menu-close">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </div>
+
+            <div>
+              <ul class="flex flex-col gap-5 text-lg select-none ml-7">
+                <li>
+                  <a href="/" class="text-white select-text">Trang chủ</a>
+                </li>
+                <li>
+                  <a href="./about.html" class="text-white select-text">Giới thiệu</a>
+                </li>
+                <li>
+                  <a href="./recruitment.html" class="text-white select-text">Tuyển dụng</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="text-white select-text">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="px-3 mx-auto sm:px-5 main max-w-7xl">
       <section>
         <h3 class="text-[#1e1d4c] text-4xl font-bold">Các vị trí tuyển dụng</h3>
-        <div class="grid grid-cols-4 mt-3 gap-y-8 gap-x-7">
+        <div class="grid grid-cols-1 mt-3 sm:grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-7">
           <div class="min-w-16 min-h-16">
             <img src="./image/position-1.png" alt="" class="w-full h-full">
             <div class="m-1 text-center">
@@ -106,8 +150,8 @@
       </section>
 
       <section>
-        <div class="flex gap-7">
-          <div class="w-1/2">
+        <div class="block md:flex gap-7">
+          <div class="w-full md:w-1/2">
             <p class="font-bold">HỒ SƠ DỰ TUYỂN:</p>
             <ul class="ml-5 leading-7">
               <li class="list-disc">
@@ -134,8 +178,8 @@
             </div>
           </div>
 
-          <div class="flex justify-end w-1/2">
-            <img src="./image/image-1.png" alt="" class="w-full max-w-sm h-44">
+          <div class="flex justify-end w-full md:w-1/2">
+            <img src="./image/image-1.png" alt="" class="w-full sm:max-w-sm h-44">
           </div>
         </div>
       </section>

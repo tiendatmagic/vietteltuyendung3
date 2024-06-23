@@ -19,13 +19,12 @@
       </div>
     </div>
 
-    <div
-      class="fixed top-0 left-0 z-30 flex items-center justify-between w-full px-5 py-3 text-gray-200 bg-[#00000099] menu"
+    <div class="fixed top-[1px] left-0 z-30 flex items-center justify-between w-full px-5 py-3 text-gray-200 menu"
       id="navbar">
       <div class="logo">
         <img src="https://picsum.photos/300/300" alt="" class="w-12 h-12 rounded-md">
       </div>
-      <div class="menu-item">
+      <div class="hidden menu-item sm:block">
         <ul class="flex gap-5 text-lg">
           <li>
             <a href="/" class="hover:text-white">Trang chủ</a>
@@ -41,15 +40,60 @@
           </li>
         </ul>
       </div>
+
+      <div class="block sm:hidden">
+        <div class="p-2.5 hover:bg-[#0000004d] rounded-full cursor-pointer" id="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute top-0 left-0 z-50 hidden w-full h-full modal-wrapper" id="modal-wrapper">
+      <div class="relative w-full h-full">
+        <div class="absolute top-0 left-0 w-full h-full menu-wrapper bg-[#00000080]">
+        </div>
+        <div class="fixed top-0 left-0 w-full h-full max-w-sm bg-[#212121]">
+          <div class="relative w-full h-full">
+
+            <div class="flex items-center justify-center w-10 h-10 m-2 p-1.5 cursor-pointer" id="menu-close">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </div>
+
+            <div>
+              <ul class="flex flex-col gap-5 text-lg select-none ml-7">
+                <li>
+                  <a href="/" class="text-white select-text">Trang chủ</a>
+                </li>
+                <li>
+                  <a href="./about.html" class="text-white select-text">Giới thiệu</a>
+                </li>
+                <li>
+                  <a href="./recruitment.html" class="text-white select-text">Tuyển dụng</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="text-white select-text">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="px-3 mx-auto sm:px-5 main max-w-7xl">
       <section>
-        <div class="flex gap-10 my-10">
-          <div class="w-1/3">
+        <div class="block gap-10 my-10 md:flex">
+          <div class="w-full md:w-1/3">
             <img src="./image/about-1.jpg" alt="">
           </div>
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <h3 class="text-[#1e1d4c] text-4xl font-bold">TỔNG QUAN VỀ CÔNG TY
             </h3>
             <ul class="mt-3">
@@ -72,20 +116,20 @@
             </button>
           </div>
         </div>
-        <div class="flex gap-10 my-10">
-          <div class="w-1/3">
+        <div class="block gap-10 my-10 md:flex">
+          <div class="w-full md:w-1/3">
             <img src="./image/about-2.jpg" alt="">
           </div>
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
 
           </div>
         </div>
       </section>
 
       <section>
-        <div class="h-[700px]">
-          <div class="flex h-full gap-5">
-            <div class="w-1/3 h-full">
+        <div class="md:h-[700px]">
+          <div class="block h-full gap-5 md:flex">
+            <div class="w-full h-full md:w-1/3">
               <div class="flex flex-col h-full gap-3">
                 <div class="h-full">
                   <img src="./image/gallery-1.jpg" alt="" class="w-full h-full">
@@ -95,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-2/3 h-full">
+            <div class="w-full h-full md:w-2/3">
               <div class="h-full">
                 <img src="./image/gallery-3.jpg" alt="" class="w-full h-full">
               </div>
@@ -138,12 +182,12 @@
     <div class="px-3 mx-auto sm:px-5 main max-w-7xl">
 
       <section>
-        <div class="flex my-5 gap-7">
-          <div class="w-1/3">
+        <div class="block my-5 md:flex gap-7">
+          <div class="w-full md:w-1/3">
             <img src="https://picsum.photos/300/300" alt="" class="w-full rounded-lg h-44">
           </div>
 
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <p class="text-[#1e1d4c] text-2xl font-bold">HUMANS OF TIN - 01</p>
 
             <div id="accordion-collapse-1" data-accordion="collapse">
@@ -207,12 +251,12 @@
           </div>
         </div>
 
-        <div class="flex my-5 gap-7">
-          <div class="w-1/3">
+        <div class="block my-5 md:flex gap-7">
+          <div class="w-full md:w-1/3">
             <img src="https://picsum.photos/300/300" alt="" class="w-full rounded-lg h-44">
           </div>
 
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <p class="text-[#1e1d4c] text-2xl font-bold">HUMANS OF TIN - 02</p>
 
             <div id="accordion-collapse-2" data-accordion="collapse">
@@ -278,12 +322,12 @@
           </div>
         </div>
 
-        <div class="flex my-5 gap-7">
-          <div class="w-1/3">
+        <div class="block my-5 md:flex gap-7">
+          <div class="w-full md:w-1/3">
             <img src="https://picsum.photos/300/300" alt="" class="w-full rounded-lg h-44">
           </div>
 
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <p class="text-[#1e1d4c] text-2xl font-bold">HUMANS OF TIN - 03</p>
 
             <div id="accordion-collapse-3" data-accordion="collapse">
@@ -348,13 +392,6 @@
         </div>
 
       </section>
-
-
-      <section>
-
-
-
-      </section>
     </div>
 
     <div class="py-7 w-full bg-[#1e1d4c]">
@@ -367,11 +404,11 @@
 
     <div class="px-3 mx-auto sm:px-5 main max-w-7xl">
       <section>
-        <div class="flex gap-10 my-10">
-          <div class="w-1/3">
-            <img src="./image/about-image.png" alt="">
+        <div class="block gap-10 my-10 md:flex">
+          <div class="w-full md:w-1/3">
+            <img src="./image/about-image.png" alt="" class="w-full max-h-96">
           </div>
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <h3 class="text-[#1e1d4c] text-2xl font-bold uppercase text-center">NGHỈ MÁT TIN HO 2023 - HÀNH TRÌNH RỰC RỠ
             </h3>
             <div class="mt-3">
@@ -400,27 +437,30 @@
           </div>
         </div>
 
-        <div class="flex gap-10 my-10">
-          <div class="w-1/3">
-            <img src="./image/about-image.png" alt="">
+        <div class="block gap-10 my-10 md:flex">
+          <div class="w-full md:w-1/3">
+            <img src="./image/about-image.png" alt="" class="w-full max-h-96">
           </div>
-          <div class="w-2/3">
-            <h3 class="text-[#1e1d4c] text-2xl font-bold uppercase text-center">NƯỚC MÁT MÙA HÈ
+          <div class="w-full md:w-2/3">
+            <h3 class="text-[#1e1d4c] text-2xl font-bold uppercase text-center">NGHỈ MÁT TIN HO 2023 - HÀNH TRÌNH RỰC RỠ
             </h3>
             <div class="mt-3">
               <p class="mb-2">
-                Ngày 31/05/2023 chị Vũ Thị Mai Hương - Phó TGĐ FTEL đã có mặt tại đại điểm làm việc của anh em kỹ thuật
-                Vùng 1 để thăm hỏi công việc và trao những chai nước mát, cổ vũ tinh thần làm việc anh em.
+                Hành trình rực rỡ “2 ngày 1 đêm” - chương trình nghỉ mát với tinh thần “chơi hết mình” của anh chị
+                em TIN HO vừa được diễn ra tại Bãi Cháy – Quảng Ninh.
               </p>
               <p class="mb-2">
-                Những chai nước mát do chính các đồng nghiệp chuẩn bị cùng sự động viên tinh thần đúng lúc đã giúp đội
-                ngũ đang làm việc ngoài trời lấy lại tinh thần và làm việc hăng hái hơn.
+                Tại đây, anh chị em HO đã được tham gia các hoạt động vui chơi, tham quan đầy thú vị sau những giờ
+                làm việc căng thẳng. Đặc biệt, bữa tiệc âm nhạc với những vũ điệu sôi động cùng trò chơi hấp dẫn đã
+                để lại ấn tượng khó phai trong lòng những thành viên tham dự.
               </p>
               <p class="mb-2">
-                Chương trình dự kiến sẽ được thực hiện trên tất cả Đơn vị toàn quốc trong thời gian gần nhất.
+                Cháy hết mình trong chuyến đi thật ý nghĩa, mong rằng người nhà TIN đã ghi lại được nhiều bức ảnh,
+                câu chuyện và kỷ niệm tốt đẹp, giúp các thành viên có những phút giây thư giãn, gần nhau hơn.
               </p>
               <p class="mb-2">
-                Anh em TIN hãy cùng đón chờ màn "đột kích" tiếp nước bất ngờ từ BLĐ nhé!
+                Anh em trên toàn TIN đã đi nghỉ mát chưa? Cùng chia sẻ những khoảnh khắc đẹp nhất của kỳ nghỉ mát
+                2023 nhé
               </p>
             </div>
 
